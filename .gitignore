@@ -14,6 +14,9 @@ Lynn und ich.jpg
 MARION*
 WhatsApp*
 
+# Website-Bilder immer einschließen
+!images/
+
 # Entwicklungsdateien
 generate_guide.py
 .claude/

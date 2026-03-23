@@ -200,15 +200,13 @@ a.btn-outline:hover, a.btn-outline:active {
   height: 72px;
 }
 .nav__logo {
-  display: flex;
-  align-items: center;
+  font-family: var(--font-sig);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  letter-spacing: .02em;
 }
-.nav__logo img {
-  height: 48px;
-  width: auto;
-  display: block;
-}
-.nav__logo:hover { opacity: .8; }
+.nav__logo:hover { color: var(--ink); }
 
 .nav__links {
   display: flex;
