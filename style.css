@@ -110,6 +110,18 @@ h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; letter-spacing: 
   border: 1.5px solid transparent;
   position: relative;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+a.btn, a.btn:visited, a.btn:link {
+  color: var(--white) !important;
+  text-decoration: none;
+}
+a.btn-outline, a.btn-outline:visited, a.btn-outline:link {
+  color: var(--accent-dark) !important;
+}
+a.btn-outline:hover, a.btn-outline:active {
+  color: var(--white) !important;
 }
 .btn::after {
   content: '';
@@ -188,13 +200,15 @@ h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; letter-spacing: 
   height: 72px;
 }
 .nav__logo {
-  font-family: var(--font-sig);
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--accent-dark);
-  letter-spacing: .02em;
+  display: flex;
+  align-items: center;
 }
-.nav__logo:hover { color: var(--ink); }
+.nav__logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+.nav__logo:hover { opacity: .8; }
 
 .nav__links {
   display: flex;
