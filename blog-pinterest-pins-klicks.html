@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warum deine Pinterest Pins keine Klicks bekommen – 8 Fehler | Marion Schäfers</title>
+  <meta name="description" content="Du pinnst regelmäßig – aber nichts passiert? Ich zeige dir die 8 häufigsten Fehler, die dafür sorgen, dass deine Pinterest Pins keine Klicks bekommen, und wie du sie sofort behebst." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #8C3F2A 0%, #D1C7B6 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '📌';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .08;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.75); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; }
+    .article-hero .lead { color: rgba(254,254,254,.85); max-width: 620px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.6); font-size: .8rem; margin-top: 1.2rem; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin: 1.6rem 0 .5rem;
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .3rem; }
+
+    .fehler-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.6rem;
+      margin: 1.8rem 0;
+    }
+    .fehler-box__num {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      margin-bottom: .3rem;
+    }
+    .fehler-box__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: .6rem;
+    }
+    .fehler-box p { margin-bottom: .6rem; color: var(--text); line-height: 1.7; }
+    .fehler-box .loesung-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-top: .8rem;
+      margin-bottom: .3rem;
+    }
+    .tipp-box {
+      background: var(--white);
+      border: 1px solid var(--bg-dark);
+      border-left: 3px solid var(--accent-dark);
+      padding: .9rem 1.2rem;
+      margin-top: .8rem;
+      font-size: .88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .tipp-box strong { color: var(--accent-dark); }
+
+    .quote-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2rem 2.4rem;
+      margin: 2.4rem 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -.2rem;
+      left: 1.6rem;
+      font-size: 5rem;
+      color: rgba(255,255,255,.25);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block p {
+      color: var(--white);
+      font-size: 1.15rem;
+      font-weight: 300;
+      padding-left: 1.2rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .quote-block p strong { font-weight: 700; color: var(--accent-orange); }
+
+    .teaser-list {
+      background: var(--bg-secondary);
+      padding: 1.4rem 1.6rem 1.4rem 2rem;
+      margin: 1.4rem 0;
+      border-left: 4px solid var(--bg-darkest);
+    }
+    .teaser-list li {
+      color: var(--text-light);
+      line-height: 2;
+      font-size: .95rem;
+    }
+    .teaser-list li span {
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-right: .4rem;
+    }
+
+    .checklist {
+      background: var(--bg-secondary);
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+    }
+    .checklist h3 { color: var(--accent-dark); margin-bottom: 1rem; }
+    .checklist ol {
+      padding-left: 1.4rem;
+      color: var(--text);
+      line-height: 2;
+    }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.4rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 500px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .95rem; }
+
+    .pin-beschreibungen {
+      border-top: 2px solid var(--bg-secondary);
+      padding-top: 2rem;
+      margin-top: 2.4rem;
+    }
+    .pin-desc {
+      background: var(--bg-primary);
+      border: 1px solid var(--bg-secondary);
+      border-left: 3px solid var(--accent-orange);
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1rem;
+      font-size: .88rem;
+      line-height: 1.7;
+      color: var(--text);
+      white-space: pre-line;
+    }
+    .pin-desc-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      margin-bottom: .4rem;
+    }
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      background: var(--bg-secondary);
+      padding: 1.4rem 1.6rem;
+      margin: 2.4rem 0;
+    }
+    .author-box__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+    .author-box__text p { margin: 0; font-size: .88rem; color: var(--text-light); line-height: 1.6; }
+    .author-box__text strong { color: var(--ink); font-size: .95rem; }
+
+    @media (max-width: 600px) {
+      .author-box { flex-direction: column; text-align: center; }
+      .fehler-box { padding: 1.1rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Pinterest Marketing · 23. März 2025</span>
+      <h1>Warum deine Pinterest Pins<br><strong>keine Klicks bekommen</strong></h1>
+      <div class="divider" style="background:rgba(255,255,255,.3);margin:1rem 0"></div>
+      <p class="lead">8 Fehler, die fast alle am Anfang machen – und wie du sie sofort behebst. Direkt umsetzbar, ohne Umwege.</p>
+      <p class="article-meta">Von Marion Schäfers · 8 Minuten Lesezeit · <a href="blog.html" style="color:inherit;text-decoration:underline">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <!-- INTRO -->
+        <p>Du gibst dir Mühe. Du erstellst Pins. Du pinnst regelmäßig. Und trotzdem passiert… nichts.</p>
+        <p>Keine Klicks. Kein Traffic. Keine Verkäufe.</p>
+        <p>Das ist frustrierend – und gleichzeitig ist es etwas, das fast alle am Anfang erleben. Nicht, weil Pinterest für sie nicht funktioniert. Sondern weil Pinterest nach einer anderen Logik arbeitet, als viele denken.</p>
+
+        <div class="quote-block">
+          <p>Pinterest ist keine Social-Media-Plattform.<br><strong>Pinterest ist eine Suchmaschine.</strong></p>
+        </div>
+
+        <p>Das bedeutet: Nicht der lauteste Content gewinnt. Nicht der, der am häufigsten postet. Sondern der, der klar zeigt, worum es geht, für wen er gedacht ist – und warum jemand klicken sollte.</p>
+        <p>Ich bin Marion. Ich bin Hausfrau, Autorin und betreibe einen kleinen Hof. Pinterest ist mein Marketingkanal – und ich habe gelernt: Wenn du verstehst, wie Pinterest wirklich denkt, wird aus Unsicherheit nach und nach ein System.</p>
+        <p>Hier zeige ich dir die 8 häufigsten Fehler, die dafür sorgen, dass Pinterest Pins keine Klicks bekommen – und was du sofort besser machen kannst.</p>
+
+        <!-- FEHLER 1 -->
+        <div class="fehler-box">
+          <div class="fehler-box__num">Fehler 01</div>
+          <div class="fehler-box__title">Kein klarer Text auf dem Pin</div>
+          <p>Pinterest ist eine Plattform, auf der Nutzer innerhalb von Sekunden entscheiden, ob ein Pin interessant ist oder nicht. Wenn dein Pin zwar schön aussieht, aber nicht sofort erkennen lässt, worum es geht – wird er einfach übersehen.</p>
+          <p>Viele machen genau hier den Fehler, zu allgemein zu formulieren. Dann steht auf dem Pin vielleicht „Mein neuer Beitrag" – aber niemand versteht in diesem Moment, warum er klicken sollte.</p>
+          <div class="loesung-label">Die Lösung</div>
+          <p>Dein Pin braucht eine klare Aussage mit erkennbarem Nutzen. Der Nutzer muss sofort verstehen: Worum geht es? Welches Problem wird gelöst? Warum sollte ich klicken?</p>
+          <div class="tipp-box"><strong>Tipp:</strong> Formuliere deinen Pin immer aus Sicht deiner Zielgruppe. Nicht: „Mein neuer Kurs ist online" – sondern: „So erstellst du dein erstes digitales Produkt Schritt für Schritt."</div>
+        </div>
+
+        <!-- FEHLER 2 -->
+        <div class="fehler-box">
+          <div class="fehler-box__num">Fehler 02</div>
+          <div class="fehler-box__title">Falsches Format – dein Pin fällt nicht auf</div>
+          <p>Pinterest bevorzugt hochformatige Pins. Wenn dein Pin zu klein, zu breit oder nicht im richtigen Verhältnis angelegt ist, geht er im Feed schneller unter. Vor allem auf dem Smartphone – und dort sind die meisten Pinterest-Nutzer unterwegs – verliert ein kleiner Pin automatisch an Sichtbarkeit.</p>
+          <div class="loesung-label">Die Lösung</div>
+          <p>Nutze für deine Pins das Format <strong>1000 × 1500 Pixel im Verhältnis 2:3</strong>. Dieses Format ist auf Pinterest bewährt und wird auf mobilen Geräten am besten dargestellt.</p>
+          <div class="tipp-box"><strong>Tipp:</strong> Wenn du mit Canva arbeitest, such einfach nach „Pinterest Pin" – dann startest du automatisch im richtigen Format.</div>
+        </div>
+
+        <!-- TEASER: FEHLER 03-08 -->
+        <h2>Die weiteren 6 Fehler – ein kurzer Überblick</h2>
+        <p>Fehler 01 und 02 kennst du jetzt. Aber es gibt noch sechs weitere, die ich in meinem kostenlosen Guide ausführlich erkläre – jeweils mit dem konkreten Problem dahinter und einer klaren Lösung:</p>
+
+        <ul class="teaser-list">
+          <li><span>Fehler 03</span> Keine Keywords – Pinterest findet dich gar nicht erst</li>
+          <li><span>Fehler 04</span> Kein Call-to-Action – niemand weiß, was als Nächstes zu tun ist</li>
+          <li><span>Fehler 05</span> Schlechte Lesbarkeit – dein Text geht im Bild unter</li>
+          <li><span>Fehler 06</span> Kein einheitliches Branding – niemand erkennt dich wieder</li>
+          <li><span>Fehler 07</span> Du pinnst ohne Plan – und gibst zu früh auf</li>
+          <li><span>Fehler 08</span> Dein Link führt zur falschen Seite – und der Klick verpufft</li>
+        </ul>
+
+        <p>Dazu gibt es im Guide auch eine <strong>8-Punkte-Checkliste zum Ausdrucken</strong> – damit du vor dem nächsten Pin schnell alles durchgehen kannst.</p>
+
+        <!-- MID-ARTICLE CTA -->
+        <div class="cta-block">
+          <div class="cta-tag">Kostenloser Guide</div>
+          <h3>Alle 8 Fehler – mit Lösung &amp; Checkliste</h3>
+          <p>14 Seiten. Direkt umsetzbar. Kostenlos – einfach Email eintragen und sofort erhalten.</p>
+          <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" class="btn btn-primary">📥 Jetzt kostenlos holen →</a>
+        </div>
+
+        <!-- ABSCHLUSS -->
+        <h2>Zum Schluss</h2>
+        <p>Pinterest funktioniert. Aber es funktioniert nach eigenen Regeln – und wer diese kennt, hat einen echten Vorteil. Nicht weil er mehr postet. Sondern weil er klarer postet.</p>
+        <p>Du brauchst kein perfektes Pinterest. Du brauchst ein System, das zu dir passt. Und genau damit darfst du anfangen.</p>
+
+        <!-- AUTORIN -->
+        <div class="author-box">
+          <div class="author-box__avatar">📌</div>
+          <div class="author-box__text">
+            <strong>Marion Schäfers</strong>
+            <p>Hausfrau, Autorin und Hofhalterin aus Wadersloh. Ich nutze Pinterest als ruhigen, langfristigen Marketingkanal für meine digitalen Produkte – ohne tägliche Präsenz, ohne Hustle.</p>
+            <p style="margin-top:.3rem"><a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:var(--accent-dark)">@marion_schfers auf Pinterest</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WEITERE ARTIKEL -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="cards-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;display:grid">
+        <a href="blog.html#artikel-1" class="card" style="text-decoration:none">
+          <div class="card__tag">Pinterest Marketing</div>
+          <h3 style="font-size:1rem">Warum Pinterest die unterschätzte Plattform für digitale Produkte ist</h3>
+          <p style="font-size:.85rem;color:var(--text-light)">Pinterest als Suchmaschine verstehen – und warum das alles verändert.</p>
+        </a>
+        <a href="blog.html#artikel-2" class="card" style="text-decoration:none">
+          <div class="card__tag">Digitale Produkte</div>
+          <h3 style="font-size:1rem">Mein erstes digitales Produkt: Was ich heute anders machen würde</h3>
+          <p style="font-size:.85rem;color:var(--text-light)">Ehrliche Einblicke – was funktioniert hat und was nicht.</p>
+        </a>
+        <a href="blog.html#artikel-3" class="card" style="text-decoration:none">
+          <div class="card__tag">Alltag & Business</div>
+          <h3 style="font-size:1rem">Wie ich mit 3 Pins pro Woche meinen ersten Verkauf gemacht habe</h3>
+          <p style="font-size:.85rem;color:var(--text-light)">Pinterest-Strategie zwischen Pferde versorgen und Schreibtisch.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
