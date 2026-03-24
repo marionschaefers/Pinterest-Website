@@ -5,11 +5,10 @@
   var banner = document.createElement('div');
   banner.id = 'cookie-banner';
   banner.innerHTML = [
-    '<p>Diese Website nutzt <strong>Google Fonts</strong> (Schriftarten von Google) und <strong>Ablefy</strong> (Kauffunktionen). ',
-    'Durch die Nutzung dieser Seite werden Daten an externe Server übertragen. ',
-    '<a href="datenschutz.html">Mehr in der Datenschutzerklärung</a>.</p>',
-    '<button id="cookie-ok">Verstanden &amp; akzeptieren</button>',
-    '<button id="cookie-close">Nur notwendige</button>'
+    '<p>Diese Website verwendet Cookies und externe Dienste. ',
+    '<a href="datenschutz.html">Mehr erfahren</a>.</p>',
+    '<button id="cookie-ok">Akzeptieren</button>',
+    '<button id="cookie-close">Ablehnen</button>'
   ].join('');
 
   Object.assign(banner.style, {
