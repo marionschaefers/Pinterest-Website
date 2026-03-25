@@ -3,7 +3,56 @@
    Premium Design System
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Tangerine:wght@400;700&display=swap');
+/* Fonts lokal gespeichert – kein Google-Server-Kontakt (DSGVO-konform) */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/lato-normal-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/lato-normal-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/lato-normal-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/lato-italic-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/lato-italic-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/tangerine-normal-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/tangerine-normal-700.woff2') format('woff2');
+}
 
 :root {
   --bg-primary:   #F7F6F2;
