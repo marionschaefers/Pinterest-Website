@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wie oft sollte man auf Pinterest pinnen, ohne sich zu stressen? | Marion Schäfers</title>
+  <meta name="description" content="15 Pins am Tag? 5 pro Woche? Jeder sagt etwas anderes. Ich sage dir wie viele Pins du wirklich brauchst - und warum die Zahl nicht das ist was Pinterest entscheidet." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #A89784 0%, #2A1F18 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '🗓️';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .07;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--accent-orange); }
+    .article-hero .lead { color: rgba(254,254,254,.8); max-width: 620px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin: 1.6rem 0 .5rem;
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .4rem; }
+
+    .quote-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2rem 2.4rem;
+      margin: 2.4rem 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -.2rem;
+      left: 1.6rem;
+      font-size: 5rem;
+      color: rgba(255,255,255,.12);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block p {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 300;
+      padding-left: 1.2rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .quote-block p strong { font-weight: 700; color: var(--accent-orange); }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .tipp-box {
+      background: var(--white);
+      border: 1px solid var(--bg-dark);
+      border-left: 3px solid var(--accent-dark);
+      padding: .9rem 1.2rem;
+      margin: 1rem 0;
+      font-size: .88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .tipp-box strong { color: var(--accent-dark); }
+
+    .answer-box {
+      background: var(--bg-dark);
+      border: none;
+      padding: 2rem 2.4rem;
+      margin: 2rem 0;
+    }
+    .answer-box .answer-label {
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .7rem;
+    }
+    .answer-box p { color: var(--ink); margin: 0; line-height: 1.75; font-size: .97rem; }
+    .answer-box p strong { color: var(--accent-dark); }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 500px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Pinterest Marketing · 11. April 2026</span>
+      <h1>Wie oft sollte man auf Pinterest pinnen,<br><strong>ohne sich zu stressen?</strong></h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">15 Pins am Tag? 5 pro Woche? Einmal täglich? Jeder Pinterest-Ratgeber sagt etwas anderes. Ich sage dir wie viele Pins du wirklich brauchst - und warum die Zahl allein Pinterest nicht interessiert.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 7 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Du liest einen Pinterest-Ratgeber. Da steht: "Für maximale Reichweite solltest du 10 bis 15 Pins pro Tag erstellen." Du machst den Tab zu.</p>
+
+        <p>15 Pins am Tag. Das sind über 100 in der Woche. Du hast einen Alltag. Einen Haushalt. Vielleicht Familie, einen Beruf, Verpflichtungen die sich nicht verschieben lassen. 15 Pins am Tag ist kein Tipp. Das ist eine Drohung.</p>
+
+        <p>Also suchst du weiter. Der nächste Ratgeber sagt: "3 bis 5 Pins pro Woche reichen völlig." Ein dritter empfiehlt täglich mindestens einen. Und ein vierter schreibt dass Qualität vor Quantität geht und es auf die Anzahl gar nicht so ankommt.</p>
+
+        <p>Am Ende weißt du nicht was stimmt. Du weißt nur eins: Irgendetwas machst du wahrscheinlich falsch.</p>
+
+        <!-- FRÜHER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Erst die Grundlage, dann die Frequenz</strong>
+            <p>Bevor du über Pinning-Häufigkeit nachdenkst: Mach deine Pins überhaupt klickwürdig. Der Gratis-Guide zeigt dir die 8 häufigsten Fehler - kostenlos.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">📥 Kostenlos holen →</a>
+        </div>
+
+        <h2>Warum die Zahl dich in die Irre führt</h2>
+
+        <p>Das Problem mit allen Zahlen die du liest ist: Sie stammen aus einer anderen Welt. Von Vollzeit-Bloggerinnen die Pinterest als ihren Hauptjob betreiben. Von Accounts mit hundert Beiträgen im Archiv die sie immer wieder neu verteilen können. Von Menschen die mit einem Team arbeiten oder Tools nutzen die stundenlanges Vorpinnen automatisieren.</p>
+
+        <p>Das bist nicht du. Und das muss es nicht sein.</p>
+
+        <p>Pinterest ist keine Plattform die dich dafür bestraft dass du nicht jeden Tag 15 Pins erstellst. Pinterest ist eine Plattform die Konsistenz belohnt. Und Konsistenz bedeutet nicht Masse. Konsistenz bedeutet Verlässlichkeit.</p>
+
+        <div class="quote-block">
+          <p>Pinterest bestraft keine Pausen.<br><strong>Pinterest belohnt Regelmäßigkeit.</strong></p>
+        </div>
+
+        <p>Drei Pins pro Woche die konsistent kommen sind wertvoller als zwanzig Pins in einer Woche und dann zwei Wochen Stille. Der Algorithmus lernt deinen Rhythmus. Und je gleichmäßiger dein Rhythmus, desto besser versteht Pinterest wann und wem es deine Inhalte zeigen soll.</p>
+
+        <h2>Der Teufelskreis den fast alle kennen</h2>
+
+        <p>Du nimmst dir vor: diese Woche pinnst du jeden Tag. Montag läuft es gut. Dienstag auch. Mittwoch kommt das Leben dazwischen. Donnerstag und Freitag pinnst du nicht. Am Wochenende denkst du: "Jetzt ist die Woche sowieso gelaufen, ich fange nächste Woche frisch an."</p>
+
+        <p>Nächste Woche das Gleiche.</p>
+
+        <p>Das ist kein Versagen. Das ist das was passiert wenn der Anspruch nicht zur Wirklichkeit passt. Wer sich zu viel vornimmt, macht am Ende weniger als jemand der sich wenig vornimmt und es durchhält.</p>
+
+        <div class="highlight-box">
+          <strong>Die gefährlichste Pinterest-Lüge ist diese:</strong> "Ich fange richtig an wenn ich Zeit habe, es konsequent zu machen." Diese Zeit kommt nicht. Wer mit drei Pins pro Woche anfängt und dabei bleibt, ist nach sechs Monaten weiter als jemand der immer auf den perfekten Start wartet.
+        </div>
+
+        <h2>Die ehrliche Antwort auf die Frage</h2>
+
+        <div class="answer-box">
+          <div class="answer-label">Die direkte Antwort</div>
+          <p><strong>3 bis 5 Pins pro Woche sind ein solider Start.</strong> Nicht weil das eine magische Zahl ist, sondern weil sie für die meisten Menschen realistisch durchhaltbar ist. Und was durchhaltbar ist, bringt Ergebnisse. Was nicht durchhaltbar ist, bringt Frust.<br><br>Wichtiger als die Zahl ist der <strong>rote Faden</strong>: Deine Pins sollten ein erkennbares Thema haben, für eine klar definierte Zielgruppe gemacht sein, und konsistent über Wochen und Monate erscheinen. Drei gute Pins pro Woche über sechs Monate schlagen jeden ambitionierten Start der nach drei Wochen einbricht.</p>
+        </div>
+
+        <!-- MITTLERER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Pinterest Erfolgsbundle - damit 3 Pins die Arbeit von 15 machen</strong>
+            <p>Das Content Kit gibt dir Ideen und Strukturen für jeden Pin. Das Logbuch zeigt dir was davon wirkt. Weniger raten, mehr Ergebnis.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Pinterest Erfolgsbundle →</a>
+        </div>
+
+        <h2>Was wirklich entscheidet, nicht die Menge</h2>
+
+        <p>Ich habe das selbst erlebt. In meiner aktiven Phase habe ich nicht täglich gepinnt. Ich hatte keine Zeit dafür. Hof, Familie, Pflege. Ich habe gepinnt wenn ich konnte, mit einem klaren Fokus auf meine Themen, mit Wiedererkennungswert im Design, mit Keywords die ich vorher recherchiert hatte.</p>
+
+        <p>Was die Zahlen zeigten: Meine Pins mit klarem Thema und guter Formulierung wurden weit häufiger geklickt als spontane Pins ohne Strategie. Die Menge war nie der Unterschied. Die Qualität und der rote Faden waren es.</p>
+
+        <p>Pinterest ist eine Suchmaschine. Suchergebnisse richten sich nicht nach dem Account der am meisten postet. Sie richten sich nach dem Account der am relevantesten ist für eine bestimmte Suchanfrage. Und Relevanz entsteht durch Fokus, nicht durch Masse.</p>
+
+        <h3>Was gute Pins von schlechten unterscheidet</h3>
+
+        <ul>
+          <li>Ein klares Thema das deine Zielgruppe aktiv sucht</li>
+          <li>Eine Überschrift die beim Scrollen sofort lesbar ist</li>
+          <li>Ein Design das Wiedererkennungswert hat</li>
+          <li>Eine Beschreibung mit echten Keywords, keine Füllsätze</li>
+          <li>Ein Link der wirklich zu dem führt was der Pin verspricht</li>
+        </ul>
+
+        <p>Drei Pins pro Woche die all das erfüllen, sind mehr wert als zwanzig die irgendwie zusammengeklickt wurden weil man eine Zahl erfüllen wollte.</p>
+
+        <div class="tipp-box">
+          <strong>Praktischer Rhythmus für den Anfang:</strong> Montag ein informativer Tipp-Pin zu deinem Kernthema. Mittwoch ein Pin der auf einen Blogartikel oder dein Produkt verweist. Freitag ein Zitatpin oder persönlicher Einblick. Das sind drei Pins, klar strukturiert, ohne Ratlosigkeit. Und dieser Rhythmus lässt sich halten.
+        </div>
+
+        <h2>Wenn du merkst dass du immer am Anfang neu anfängst</h2>
+
+        <p>Es gibt eine Version von Pinterest-Stress die ich gut kenne. Du weißt nicht was du als nächstes pinnen sollst. Du öffnest Canva und starrst auf eine leere Vorlage. Du schließt sie wieder. Du denkst: "Morgen."</p>
+
+        <p>Das passiert nicht weil du unmotiviert bist. Das passiert weil du immer wieder von vorne anfangen musst. Weil du keinen Vorrat an Ideen hast, keinen Plan was als nächstes kommt, kein System das dir die Entscheidung abnimmt.</p>
+
+        <p>Wenn das wegfällt, verändert sich alles. Du öffnest Canva, weißt was du tust, erstellst deinen Pin und schließt den Laptop. Fertig. Ohne Drama, ohne Stunde verloren.</p>
+
+        <p style="font-weight:700;color:var(--accent-dark)">Konsistenz ist kein Charakter-Merkmal. Konsistenz ist ein Ergebnis von System.</p>
+
+        <div class="cta-block">
+          <div class="cta-tag">Meistgewählt</div>
+          <h3>Pinterest Erfolgsbundle</h3>
+          <p>Content Kit + Logbuch im Set. Du weißt immer was du als nächstes pinnen sollst - und du siehst was davon wirklich ankommt. Drei Pins pro Woche. Mit Plan. Mit Ergebnis.</p>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Erfolgsbundle →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Gratis starten: <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" style="color:var(--accent-orange)">8 Pin-Fehler Guide →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pins keine Ergebnisse bringen, obwohl du alles richtig machst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog-pinterest-content-planen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum die meisten Pinterest-Nutzerinnen planlos pinnen</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Und wie du mit einem einfachen System Struktur bringst.</span>
+        </a>
+        <a href="blog-pinterest-pins-klicks.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>8 Fehler warum deine Pins keine Klicks bekommen</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Konkrete Fehler, konkrete Lösungen - sofort umsetzbar.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
