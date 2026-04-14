@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warum Social Media für Frauen ab 40 nicht funktioniert - und was wirklich hilft | Marion Schäfers</title>
+  <meta name="description" content="Instagram, TikTok, täglich posten, immer sichtbar sein - für Frauen ab 40 mit einem echten Leben ist das kein Marketing. Das ist Erschöpfung. Es gibt einen besseren Weg." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #2A1F18 0%, #A89784 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '👩';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .07;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--accent-orange); }
+    .article-hero .lead { color: rgba(254,254,254,.8); max-width: 640px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin: 1.6rem 0 .5rem;
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .4rem; }
+
+    .quote-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2rem 2.4rem;
+      margin: 2.4rem 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -.2rem;
+      left: 1.6rem;
+      font-size: 5rem;
+      color: rgba(255,255,255,.12);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block p {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 300;
+      padding-left: 1.2rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .quote-block p strong { font-weight: 700; color: var(--accent-orange); }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .tipp-box {
+      background: var(--white);
+      border: 1px solid var(--bg-dark);
+      border-left: 3px solid var(--accent-dark);
+      padding: .9rem 1.2rem;
+      margin: 1rem 0;
+      font-size: .88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .tipp-box strong { color: var(--accent-dark); }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .vs-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.8rem 0;
+    }
+    .vs-block__col {
+      padding: 1.4rem;
+    }
+    .vs-block__col--bad {
+      background: #f5eded;
+      border-top: 3px solid #c0392b;
+    }
+    .vs-block__col--good {
+      background: var(--bg-secondary);
+      border-top: 3px solid var(--accent-orange);
+    }
+    .vs-block__col h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .vs-block__col--bad h4 { color: #c0392b; }
+    .vs-block__col--good h4 { color: var(--accent-dark); }
+    .vs-block__col ul {
+      padding-left: 1.2rem;
+      margin: 0;
+      font-size: .88rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 520px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+      .vs-block { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Pinterest · Strategie · 14. April 2026</span>
+      <h1>Warum Social Media für Frauen ab 40<br><strong>nicht funktioniert,</strong><br>und was wirklich hilft</h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">Täglich posten. Immer sichtbar sein. Reels, Stories, Trends folgen. Für Frauen mit einem echten Leben ist das kein Marketing - das ist Erschöpfung. Ich zeige dir warum das System nicht für dich gemacht ist - und was stattdessen funktioniert.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 9 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Du hast es versucht. Vielleicht mehrmals. Du hast einen Instagram-Account erstellt, ein paar Wochen gepostet, dir Mühe gegeben. Du hast Reels geschaut, versucht den Stil nachzumachen, dich gefragt warum das bei anderen so leicht aussieht. Und irgendwann hast du aufgehört.</p>
+
+        <p>Nicht weil du aufgibst. Sondern weil sich das alles falsch angefühlt hat. Zu laut. Zu viel. Zu wenig du.</p>
+
+        <p>Und dann kam der nächste Gedanke: <em>"Vielleicht bin ich einfach nicht gemacht fürs Online-Business."</em></p>
+
+        <div class="highlight-box">
+          <strong>Das stimmt nicht.</strong> Du bist nicht falsch für das Online-Business. Das Online-Business das dir gezeigt wird, ist falsch für dich. Das ist ein großer Unterschied.
+        </div>
+
+        <!-- FRÜHER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Erst lesen, dann entscheiden</strong>
+            <p>Hol dir den Gratis-Guide - 8 Pin-Fehler die deine Reichweite kosten. Kostenlos, sofort nutzbar.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">📥 Kostenlos holen →</a>
+        </div>
+
+        <h2>Für wen wurde Social Media eigentlich gebaut?</h2>
+
+        <p>Instagram wurde 2010 gegründet. Die Zielgruppe: junge Menschen mit Smartphone, viel Zeit und dem Wunsch nach Aufmerksamkeit. Der Algorithmus belohnt täglich neuen Content, emotionale Reaktionen, Trends die innerhalb von Stunden kommen und gehen.</p>
+
+        <p>TikTok ist noch extremer. Wer nicht täglich postet, verschwindet. Wer nicht tanzt, Lippensync macht oder sich vor der Kamera inszeniert, wird nicht gesehen. Das Format ist auf Unterhaltung ausgelegt - nicht auf Information, nicht auf Vertrauen, nicht auf nachhaltigen Aufbau.</p>
+
+        <p>Du bist Anfang, Mitte oder Ende 40. Oder älter. Du hast einen Alltag der keine Verhandlung kennt. Familie. Vielleicht Pflege. Einen Haushalt. Einen Hof. Einen Job. Verpflichtungen die sich nicht verschieben lassen weil gerade ein Trend auf TikTok läuft.</p>
+
+        <p>Und dann setzt du dich hin und sollst täglich performen. Für einen Algorithmus der deine Situation nicht kennt und nicht interessiert.</p>
+
+        <div class="quote-block">
+          <p>Du passt nicht in Social Media.<br><strong>Social Media passt nicht zu dir.</strong></p>
+        </div>
+
+        <h2>Was Social Media von dir verlangt - und was das wirklich bedeutet</h2>
+
+        <p>Lass uns ehrlich sein über das was "Online sichtbar sein" auf Instagram und TikTok konkret bedeutet:</p>
+
+        <ul>
+          <li><strong>Täglich neuer Content</strong> - nicht wöchentlich, täglich. Wer eine Woche pausiert, verliert Reichweite.</li>
+          <li><strong>Dein Gesicht vor der Kamera</strong> - Reels mit dir, Stories mit dir, Live-Sessions mit dir. Wer nicht zeigt wer er ist, wird nicht gesehen.</li>
+          <li><strong>Trendbewusstsein</strong> - du musst wissen was gerade viral geht und schnell reagieren. Heute. Nicht morgen.</li>
+          <li><strong>Emotional triggern</strong> - der Algorithmus bevorzugt starke Reaktionen: Empörung, Begeisterung, Überraschung. Sachlicher, hilfreicher Content wird abgestraft.</li>
+          <li><strong>Immer verfügbar sein</strong> - Kommentare beantworten, DMs schreiben, engagen. Wer nicht interagiert, sinkt.</li>
+        </ul>
+
+        <p>Wer hat die Zeit dafür? Wer hat die Energie? Wer will sich so verbiegen - jeden Tag, ohne Pause, ohne Ergebnis das in einem vernünftigen Verhältnis zum Aufwand steht?</p>
+
+        <div class="highlight-box">
+          Ich habe es selbst versucht. Ich war der Marktschreier. Fünf Mal am Tag auf Instagram. Immer online, immer präsent, immer lächeln. Ich habe alles gemacht was man mir gesagt hat. <strong>Und ich bin dabei fast kaputtgegangen.</strong>
+        </div>
+
+        <!-- ZWEITER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Digital starten ohne Druck</strong>
+            <p>Mein Minikurs zeigt dir in 30 Tagen wie du ein eigenes digitales Produkt aufbaust - ohne Social-Media-Stress, ohne tägliche Präsenz, in deinem eigenen Tempo.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/t3NOsO" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Zum Minikurs →</a>
+        </div>
+
+        <h2>Der Unterschied den kaum jemand erklärt</h2>
+
+        <p>Es gibt eine Plattform die nach völlig anderen Regeln funktioniert. Keine tägliche Präsenz nötig. Kein Gesicht vor der Kamera. Keine Trends die du in 24 Stunden mitmachen musst. Kein Algorithmus der dich bestraft wenn du zwei Wochen krank warst oder einfach zu viel um die Ohren hattest.</p>
+
+        <p>Diese Plattform heißt Pinterest.</p>
+
+        <p>Pinterest ist keine Social-Media-Plattform. Pinterest ist eine <strong>Suchmaschine</strong>. Menschen gehen auf Pinterest um etwas zu finden - Antworten, Ideen, Lösungen, Produkte. Nicht um sich zu unterhalten. Nicht um zu scrollen bis der Kopf leer ist. Sondern weil sie etwas suchen.</p>
+
+        <p>Und wenn dein Content die Antwort auf das ist was sie suchen, werden sie auf dich stoßen. Heute. In drei Monaten. In zwei Jahren. Ein Pin der heute erstellt wird, kann in 18 Monaten noch Klicks bringen. Das gibt es auf Instagram nicht. Das gibt es auf TikTok nicht.</p>
+
+        <div class="vs-block">
+          <div class="vs-block__col vs-block__col--bad">
+            <h4>Instagram / TikTok</h4>
+            <ul>
+              <li>Content stirbt nach 24-48 Stunden</li>
+              <li>Täglich neue Inhalte nötig</li>
+              <li>Gesicht und Persönlichkeit im Vordergrund</li>
+              <li>Algorithmus bestraft Pausen</li>
+              <li>Unterhaltung statt Information</li>
+              <li>Erschöpfung nach 4 Wochen</li>
+            </ul>
+          </div>
+          <div class="vs-block__col vs-block__col--good">
+            <h4>Pinterest</h4>
+            <ul>
+              <li>Pins bleiben monate- bis jahrelang aktiv</li>
+              <li>3-5 Pins pro Woche reichen völlig</li>
+              <li>Kein Gesicht nötig, Text und Design genügen</li>
+              <li>Pausen schaden nicht</li>
+              <li>Suchmaschine: Menschen finden dich aktiv</li>
+              <li>Aufbau der sich langfristig trägt</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- DRITTER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Pinterest Erfolgsbundle - dein Einstieg ohne Stress</strong>
+            <p>Das Content Kit zeigt dir was du pinnst. Das Logbuch zeigt dir was davon wirkt. Beide Produkte im Set - damit du von Anfang an mit System arbeitest statt zu raten.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Pinterest Erfolgsbundle →</a>
+        </div>
+
+        <h2>Warum Pinterest besonders gut zu Frauen ab 40 passt</h2>
+
+        <p>Das ist kein Zufall. Und kein Trost.</p>
+
+        <p>Frauen ab 40 haben etwas das 22-jährige Influencerinnen nicht haben: <strong>echtes Leben, echte Erfahrung, echtes Wissen.</strong> Jahrzehnte davon. Und genau das suchen Menschen auf Pinterest.</p>
+
+        <p>Sie suchen keine aufgesetzte Persönlichkeit. Sie suchen Antworten. Praktische Tipps. Ehrliche Einblicke. Bewährtes Wissen von jemandem der es selbst durchlebt hat. Das ist dein Vorteil. Nicht dein Nachteil.</p>
+
+        <p>Du musst nicht jung aussehen. Du musst nicht trendig sein. Du musst nicht tanzen. Du musst nur das was du weißt - und das ist viel - in eine Form bringen die anderen weiterhilft.</p>
+
+        <p>Das kannst du. Besser als die meisten.</p>
+
+        <div class="tipp-box">
+          <strong>Meine eigene Geschichte:</strong> Ich bin Hausfrau, Autorin, Pflegeperson und Hofhalterin. Ich habe keine Zeit für tägliche Instagram-Präsenz. Ich habe Pinterest zu meinem Marketingkanal gemacht - und es funktioniert. Nicht trotz meines vollen Alltags. Sondern weil Pinterest zu diesem Alltag passt.
+        </div>
+
+        <h2>Was du brauchst um auf Pinterest durchzustarten</h2>
+
+        <p>Kein großes Budget. Keine professionelle Kamera. Kein Designstudium. Was du brauchst ist überschaubar:</p>
+
+        <p><strong>Ein klares Thema.</strong> Wofür stehst du? Was weißt du? Für wen ist das relevant? Wenn du das weißt, weißt du was du pinnst.</p>
+
+        <p><strong>Regelmäßigkeit - nicht Masse.</strong> Drei bis fünf Pins pro Woche reichen für den Anfang. Was zählt ist dass du dabei bleibst. Nicht dass du täglich 15 Pins rausschmeißt und nach drei Wochen aufhörst.</p>
+
+        <p><strong>Pins die geklickt werden.</strong> Das bedeutet: klare Überschrift, erkennbares Design, ein konkretes Versprechen das die Leserin weiterbringt. Kein Rätselraten was hinter dem Pin steckt.</p>
+
+        <p><strong>Ein System das trägt.</strong> Nicht jedes Mal von null anfangen. Nicht jede Woche neu überlegen was du pinnen willst. Ein System das dir diese Entscheidungen abnimmt - damit du die Energie die du hast sinnvoll einsetzt.</p>
+
+        <!-- VIERTER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Pinterest Content Kit - nie wieder ratlos</strong>
+            <p>51 fertige Hooks und 50 Prompts für deine Pins. Du öffnest das Kit, nimmst was passt, passt es an dein Thema an. Fertig. Kein leeres Canva-Dokument mehr.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/wqwhsA" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Content Kit →</a>
+        </div>
+
+        <h2>Der Moment in dem sich alles ändert</h2>
+
+        <p>Es gibt einen Moment den viele beschreiben die von Instagram zu Pinterest gewechselt haben. Den Moment in dem sie merken: <em>Das hier fühlt sich richtig an.</em></p>
+
+        <p>Nicht weil Pinterest einfacher ist. Sondern weil es anders ist. Weil du nicht performst - du informierst. Weil du nicht täglich präsent sein musst - du baust auf. Weil deine Inhalte nicht verschwinden - sie bleiben und wirken weiter.</p>
+
+        <p>Ich erinnere mich an meinen ersten Monat auf Pinterest. Ich hatte 3.000 monatliche Profilaufrufe nach 26 Tagen. Ohne tägliches Posten. Ohne Reels. Ohne mein Gesicht in die Kamera zu halten. Einfach indem ich guten Content erstellt habe der zu meiner Zielgruppe passt.</p>
+
+        <p>Das ist nicht Magie. Das ist das System das Pinterest von Grund auf anders macht als alles was du davor versucht hast.</p>
+
+        <p style="font-weight:700;color:var(--accent-dark)">Du bist nicht zu alt für Online-Business. Du warst nur auf der falschen Plattform.</p>
+
+        <div class="cta-block">
+          <div class="cta-tag">Dein Einstieg</div>
+          <h3>Pinterest Erfolgsbundle</h3>
+          <p>Content Kit + Logbuch im Set. Ideen die du sofort nutzen kannst. Tracking das dir zeigt was funktioniert. Das System für Frauen die keine Zeit für tägliches Performen haben - aber Ergebnisse wollen.</p>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Erfolgsbundle →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Oder starte mit dem <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" style="color:var(--accent-orange)">Gratis-Guide: 8 Pin-Fehler →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-unterschaetzt.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum Pinterest die unterschätzte Plattform für digitale Produkte ist</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Meine Geschichte - von Social-Media-Erschöpfung bis Pinterest-Begeisterung.</span>
+        </a>
+        <a href="blog-pinterest-wie-oft-pinnen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Wie oft sollte man auf Pinterest pinnen, ohne sich zu stressen?</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">3 Pins pro Woche reichen - wenn du weißt was du tust.</span>
+        </a>
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pins keine Ergebnisse bringen, obwohl du alles richtig machst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
