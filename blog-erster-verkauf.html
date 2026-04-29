@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein erster Verkauf auf Pinterest - und warum ich fast mein Handy fallen gelassen hätte | Marion Schäfers</title>
+  <meta name="description" content="Erst das Freebie, eineinhalb Stunden später das Bundle. Mein erster Verkauf auf Pinterest - was er mir gezeigt hat und was das für dich bedeutet." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #8C3F2A 0%, #FF751F 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '🎉';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .1;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--white); }
+    .article-hero .lead { color: rgba(254,254,254,.85); max-width: 640px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .4rem; }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .moment-box {
+      background: linear-gradient(135deg, #8C3F2A 0%, #FF751F 100%);
+      color: var(--white);
+      padding: 2rem 2.4rem;
+      margin: 2.4rem 0;
+      text-align: center;
+    }
+    .moment-box p {
+      color: var(--white);
+      font-size: 1.15rem;
+      font-weight: 300;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .moment-box p strong { font-weight: 700; }
+
+    .timeline {
+      margin: 2rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline li {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.4rem;
+      align-items: flex-start;
+    }
+    .timeline__dot {
+      width: 2.4rem;
+      height: 2.4rem;
+      min-width: 2.4rem;
+      background: var(--accent-orange);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .timeline__text strong { display: block; color: var(--ink); margin-bottom: .2rem; font-size: .95rem; }
+    .timeline__text span { font-size: .88rem; color: var(--text-light); line-height: 1.6; }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 500px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Erfahrungsbericht · 14. April 2026</span>
+      <h1>Mein erster Verkauf auf Pinterest.<br><strong>Und warum ich fast mein Handy fallen gelassen hätte.</strong></h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">Erst das Freebie. Eineinhalb Stunden später das Bundle. Zwei Verkäufe an einem Abend - und ich stand in der Küche und hatte Tränen in den Augen. Ich erzähle dir was passiert ist. Und was das für dich bedeutet.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 5 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Es war ein ganz normaler Abend. Ich hatte meinen Tag hinter mir, Hof, Haushalt, die üblichen Dinge. Ich hatte mein Handy in der Hand - nicht weil ich etwas Bestimmtes erwartet hätte. Einfach so.</p>
+
+        <p>Dann die Benachrichtigung.</p>
+
+        <p>Ich habe zweimal hingeschaut. Dann nochmal. Eine Person hatte sich meinen Gratis-Guide geholt. Den Guide über die 8 Pin-Fehler. Ich habe kurz gelächelt und das Handy wieder weggelegt.</p>
+
+        <p>Eineinhalb Stunden später: die nächste Benachrichtigung.</p>
+
+        <p>Dieselbe Person. Das Pinterest Erfolgsbundle.</p>
+
+        <div class="moment-box">
+          <p>Ich habe fast mein Handy fallen gelassen.<br><strong>Ich stand in der Küche und hatte Tränen in den Augen.</strong></p>
+        </div>
+
+        <p>Mein Mann kam rein und fragte was passiert sei. Ich habe ihm gezeigt was ich auf dem Handy sah. Er hatte ebenfalls Tränen in den Augen. Wir haben uns angeschaut und beide gelacht und geweint gleichzeitig.</p>
+
+        <p>Wegen 19 Euro.</p>
+
+        <p>Und trotzdem - oder genau deswegen - war das einer der schönsten Momente seit langem.</p>
+
+        <h2>Warum dieser Moment so viel bedeutet</h2>
+
+        <p>Es geht nicht um 19 Euro. Das wäre gelogen.</p>
+
+        <p>Es geht darum was diese 19 Euro bedeuten. Jemand da draußen hat meinen Content gefunden. Hat ihn gelesen. Hat gedacht: <em>Ja. Das bin ich. Das brauche ich.</em> Und hat vertraut. Einer Frau die sie nicht kennt, auf einer Website die noch keine drei Monate alt ist, mit Produkten die ich mit meinen eigenen Händen gebaut habe.</p>
+
+        <p>Das ist kein Zufall. Das ist das System das funktioniert.</p>
+
+        <div class="highlight-box">
+          Erst das Freebie. Dann das Vertrauen. Dann der Kauf. Eineinhalb Stunden. Das ist keine Magie - das ist der Weg den ich dir hier zeige. Und er funktioniert.
+        </div>
+
+        <!-- CTA MITTE -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Das Pinterest Erfolgsbundle</strong>
+            <p>Content Kit + Logbuch im Set. Das Werkzeug das meiner ersten Käuferin geholfen hat - und das dir zeigt was du pinnst und was davon wirklich ankommt.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Pinterest Erfolgsbundle →</a>
+        </div>
+
+        <h2>Was in diesen eineinhalb Stunden passiert ist</h2>
+
+        <p>Ich habe mir das genau angeschaut. Und es ist so klar wie es nur sein kann:</p>
+
+        <ul class="timeline">
+          <li>
+            <div class="timeline__dot">1</div>
+            <div class="timeline__text">
+              <strong>Gratis-Guide geholt</strong>
+              <span>Die Person hat meinen Pin auf Pinterest gefunden, auf meinen Blog geklickt, den Guide kostenlos heruntergeladen. Das war der erste Schritt - Vertrauen aufbauen.</span>
+            </div>
+          </li>
+          <li>
+            <div class="timeline__dot">2</div>
+            <div class="timeline__text">
+              <strong>Guide gelesen</strong>
+              <span>Eineinhalb Stunden. Sie hat gelesen. Hat sich erkannt. Hat gemerkt: hier spricht jemand der versteht womit ich kämpfe.</span>
+            </div>
+          </li>
+          <li>
+            <div class="timeline__dot">3</div>
+            <div class="timeline__text">
+              <strong>Bundle gekauft</strong>
+              <span>Kein langes Überlegen. Keine zweite Meinung. Die Entscheidung kam aus dem Lesen. Das ist Copywriting das wirkt.</span>
+            </div>
+          </li>
+        </ul>
+
+        <p>Das ist das System. Freebie gibt Vertrauen. Vertrauen führt zum Kauf. Und Pinterest bringt die Menschen dorthin - ohne dass ich täglich auf Instagram performen oder Reels drehen muss.</p>
+
+        <h2>Was das für dich bedeutet</h2>
+
+        <p>Wenn du das hier liest und selbst gerade am Anfang stehst - dann ist das meine Botschaft an dich:</p>
+
+        <p>Es funktioniert. Nicht sofort. Nicht ohne Arbeit. Aber es funktioniert.</p>
+
+        <p>Ich bin eine Hausfrau, Pflegeperson und Hofhalterin. Ich habe keine Marketingausbildung. Ich habe keine große Reichweite. Ich habe keinen Kurs für tausende Euro gemacht. Ich habe angefangen, gemacht, gelernt, weitergemacht.</p>
+
+        <p>Und an einem ganz normalen Abend hat mein Handy zweimal geklingelt.</p>
+
+        <p style="font-weight:700;color:var(--accent-dark)">Wenn es bei mir funktioniert - funktioniert es auch bei dir. Du brauchst ein System. Kein Wunder.</p>
+
+        <div class="cta-block">
+          <div class="cta-tag">Das System dahinter</div>
+          <h3>Pinterest Erfolgsbundle</h3>
+          <p>Content Kit + Logbuch. Ideen die du sofort nutzen kannst. Auswertung die dir zeigt was funktioniert. Das Werkzeug das mir geholfen hat - und das ich dir von Herzen empfehle.</p>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Erfolgsbundle →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Oder starte kostenlos: <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" style="color:var(--accent-orange)">8 Pin-Fehler Guide →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-geld-verdienen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Mit Pinterest Geld verdienen - was nach 30 Tagen wirklich passiert</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Ehrliche Zahlen, keine Märchen.</span>
+        </a>
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pins keine Ergebnisse bringen, obwohl du alles richtig machst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog-pinterest-unterschaetzt.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum Pinterest die unterschätzte Plattform für digitale Produkte ist</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Meine Geschichte vom Anfang bis heute.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <img src="https://vg08.met.vgwort.de/na/84a0457de67343a48b9b98ccd79c4f35" width="1" height="1" alt="" />
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
