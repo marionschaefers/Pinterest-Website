@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinterest für Anfängerinnen: Schritt für Schritt zur ersten Reichweite | Marion Schäfers</title>
+  <meta name="description" content="Du willst mit Pinterest starten, weißt aber nicht wo du anfangen sollst? Diese Schritt-für-Schritt-Anleitung zeigt dir alles was du wirklich brauchst - ohne Überforderung." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #A89784 0%, #8C3F2A 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '📌';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .07;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--accent-orange); }
+    .article-hero .lead { color: rgba(254,254,254,.8); max-width: 640px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.8rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin: 1.6rem 0 .5rem;
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul, .article-body ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body li { margin-bottom: .4rem; }
+
+    .step-block {
+      background: var(--bg-secondary);
+      border: none;
+      border-left: 5px solid var(--accent-orange);
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    .step-block__number {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      margin-bottom: .4rem;
+    }
+    .step-block h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 .8rem;
+    }
+    .step-block p {
+      color: var(--text);
+      margin: 0;
+      font-size: .95rem;
+      line-height: 1.75;
+    }
+    .step-block ul {
+      margin: .6rem 0 0;
+      padding-left: 1.2rem;
+      font-size: .9rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .quote-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2rem 2.4rem;
+      margin: 2.4rem 0;
+      position: relative;
+    }
+    .quote-block::before {
+      content: '"';
+      position: absolute;
+      top: -.2rem;
+      left: 1.6rem;
+      font-size: 5rem;
+      color: rgba(255,255,255,.12);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .quote-block p {
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 300;
+      padding-left: 1.2rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+    .quote-block p strong { font-weight: 700; color: var(--accent-orange); }
+
+    .tipp-box {
+      background: var(--white);
+      border: 1px solid var(--bg-dark);
+      border-left: 3px solid var(--accent-dark);
+      padding: .9rem 1.2rem;
+      margin: 1rem 0;
+      font-size: .88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .tipp-box strong { color: var(--accent-dark); }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 520px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Pinterest für Anfängerinnen · 29. April 2026</span>
+      <h1>Pinterest für Anfängerinnen:<br><strong>Schritt für Schritt</strong><br>zur ersten Reichweite</h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">Du weißt dass Pinterest funktioniert - aber du weißt nicht wo du anfangen sollst. Dieser Artikel zeigt dir jeden Schritt: vom leeren Account bis zu deinen ersten echten Klicks. Ohne Abkürzungen, ohne Überforderung.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 11 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Du hast von Pinterest gehört. Vielleicht schon länger. Du weißt dass andere Frauen damit Reichweite aufbauen, Produkte verkaufen, ohne täglich auf Instagram zu performen. Du willst das auch. Aber du öffnest Pinterest - und weißt nicht wo du anfangen sollst.</p>
+
+        <p>Boards? Pins? Keywords? Business-Account? Tailwind? Du liest einen Artikel, dann noch einen, dann noch einen. Und am Ende weißt du mehr Begriffe - aber fängst immer noch nicht an.</p>
+
+        <div class="highlight-box">
+          <strong>Das ist das Problem mit den meisten Pinterest-Anleitungen:</strong> Sie erklären zu viel auf einmal. Du brauchst keinen Überblick über alle Möglichkeiten. Du brauchst einen klaren ersten Schritt. Und dann den zweiten.
+        </div>
+
+        <p>Genau das bekommst du hier. Schritt für Schritt. In der richtigen Reihenfolge.</p>
+
+        <!-- FRÜHER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Bevor du startest: Diese 8 Fehler kosten dich Reichweite</strong>
+            <p>Hol dir den Gratis-Guide - damit du die häufigsten Anfängerfehler von Anfang an vermeidest. Kostenlos, sofort nutzbar.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">📥 Kostenlos holen →</a>
+        </div>
+
+        <h2>Schritt 1: Den richtigen Account erstellen</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 01</div>
+          <h3>Business-Account einrichten - nicht den privaten</h3>
+          <p>Geh auf pinterest.com und erstelle einen Account. Wichtig: wähle einen <strong>Business-Account</strong>, keinen privaten. Der Business-Account gibt dir Zugang zu Pinterest Analytics - also zu den Zahlen die dir zeigen was funktioniert. Ohne Analytics pinnst du im Blindflug.</p>
+          <ul>
+            <li>Geh auf pinterest.com/business/create</li>
+            <li>E-Mail und Passwort eingeben</li>
+            <li>Business-Account auswählen - nicht "für mich"</li>
+            <li>Branche auswählen die am besten zu dir passt</li>
+          </ul>
+        </div>
+
+        <div class="tipp-box">
+          <strong>Hast du bereits einen privaten Account?</strong> Du kannst ihn direkt in einen Business-Account umwandeln: Einstellungen → Account wechseln → Zu Business wechseln. Deine Inhalte bleiben erhalten.
+        </div>
+
+        <h2>Schritt 2: Dein Profil optimieren</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 02</div>
+          <h3>Profilbild, Name und Bio - so wirst du gefunden</h3>
+          <p>Dein Profil ist deine Visitenkarte. Menschen die deinen Pin sehen und mehr wissen wollen, schauen als erstes auf dein Profil. Drei Dinge entscheiden ob sie bleiben oder weitergehen:</p>
+          <ul>
+            <li><strong>Profilbild:</strong> Dein Gesicht oder ein klares Logo - kein verschwommenes Handyfoto</li>
+            <li><strong>Profilname:</strong> Dein Name + dein Thema, zum Beispiel "Marion Schäfers | Pinterest &amp; digitale Produkte"</li>
+            <li><strong>Bio:</strong> In zwei Sätzen: für wen bist du da, was bekommen sie von dir, und ein klarer Link zu deiner Website</li>
+          </ul>
+        </div>
+
+        <p>Deine Bio ist kein Tagebucheintrag. Sie ist ein Versprechen an deine Zielgruppe. Schreib nicht was du bist - schreib was du für sie tust.</p>
+
+        <div class="quote-block">
+          <p>Nicht: "Ich bin Marion und liebe Pinterest."<br><strong>Sondern: "Ich zeige Frauen wie sie mit Pinterest Reichweite aufbauen, ohne täglich zu posten."</strong></p>
+        </div>
+
+        <h2>Schritt 3: Deine ersten Boards anlegen</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 03</div>
+          <h3>Boards sind deine Themenordner - leg sie strategisch an</h3>
+          <p>Boards sind Sammlungen von Pins zu einem bestimmten Thema. Pinterest nutzt deine Board-Namen um zu verstehen wofür dein Account steht. Deshalb sind klare, keyword-reiche Board-Namen wichtig.</p>
+          <ul>
+            <li>Erstell 5 bis 8 Boards zu deinen Kernthemen</li>
+            <li>Benenne sie so wie Menschen suchen: "Pinterest Marketing für Anfänger" statt "Meine Pinterest-Tipps"</li>
+            <li>Füge eine kurze Board-Beschreibung hinzu - auch hier Keywords verwenden</li>
+            <li>Leg ein "Über mich" Board an mit Pins die dich vorstellen</li>
+          </ul>
+        </div>
+
+        <div class="tipp-box">
+          <strong>Wie viele Boards brauchst du?</strong> Fang mit 5 an. Lieber 5 gut gepflegte Boards als 20 leere. Pinterest bevorzugt Accounts die konsistent zu einem Thema pinnen.
+        </div>
+
+        <!-- MITTLERER CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Pinterest Erfolgsbundle - nie wieder ratlos was du pinnen sollst</strong>
+            <p>Das Content Kit gibt dir 51 fertige Ideen und Strukturen. Das Logbuch zeigt dir was davon ankommt. Beides zusammen - damit du von Anfang an mit System arbeitest.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Pinterest Erfolgsbundle →</a>
+        </div>
+
+        <h2>Schritt 4: Keywords recherchieren - bevor du pinnst</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 04</div>
+          <h3>Pinterest ist eine Suchmaschine - denk wie eine Suchende</h3>
+          <p>Der wichtigste Gedankenwechsel für Anfängerinnen: Pinterest ist kein Social Media. Pinterest ist eine Suchmaschine - wie Google, aber mit Bildern. Menschen gehen auf Pinterest und tippen ein was sie suchen. Dein Job ist es mit deinen Pins in diesen Suchergebnissen aufzutauchen.</p>
+          <p>So findest du die richtigen Keywords:</p>
+          <ul>
+            <li>Geh auf Pinterest und tippe dein Thema in die Suchleiste</li>
+            <li>Schau welche Vorschläge erscheinen - das sind echte Suchanfragen</li>
+            <li>Schau dir die bunten Kategorie-Kacheln unter der Suchleiste an - das sind verwandte Themen</li>
+            <li>Notiere dir 10 bis 15 Keywords die zu dir und deiner Zielgruppe passen</li>
+          </ul>
+        </div>
+
+        <p>Diese Keywords kommen dann in deine Pin-Titel, Pin-Beschreibungen und Board-Namen. Nicht einmal. Immer wieder. Pinterest lernt mit der Zeit wofür du relevant bist.</p>
+
+        <h2>Schritt 5: Deinen ersten Pin erstellen</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 05</div>
+          <h3>Design, Text, Link - in dieser Reihenfolge denken</h3>
+          <p>Ein Pin besteht aus drei Teilen die alle zusammenpassen müssen:</p>
+          <ul>
+            <li><strong>Bild:</strong> Hochformat (2:3 - also zum Beispiel 1000 x 1500 Pixel), heller Hintergrund, klares Design. Dunkle Bilder verschwinden im Feed.</li>
+            <li><strong>Überschrift auf dem Bild:</strong> Groß, lesbar, auf einen Blick verständlich. Du hast zwei Sekunden. Nutze sie.</li>
+            <li><strong>Beschreibung:</strong> 2 bis 3 Sätze mit deinen Keywords. Was bekommt die Leserin wenn sie klickt? Sag es direkt.</li>
+            <li><strong>Link:</strong> Auf deine Website, deinen Blog, dein Produkt. Jeder Pin braucht einen Zielort.</li>
+          </ul>
+        </div>
+
+        <div class="tipp-box">
+          <strong>Canva ist dein bestes Werkzeug.</strong> Kostenlos nutzbar, mit fertigen Pinterest-Vorlagen. Wähle das Format 1000 x 1500 Pixel und passe die Vorlage an deine Farben und Schriften an. Einmal einrichten - immer wiederverwenden.
+        </div>
+
+        <p style="font-size:.92rem;color:var(--text-light)">Du fragst dich warum manche Pins geklickt werden und andere nicht? <a href="blog-pinterest-pins-klicks.html" style="color:var(--accent-dark);font-weight:700">Hier findest du die 8 häufigsten Fehler →</a></p>
+
+        <h2>Schritt 6: Regelmäßig pinnen - mit Plan</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 06</div>
+          <h3>Konsistenz schlägt Masse - immer</h3>
+          <p>Du musst nicht täglich 15 Pins erstellen. Das ist einer der größten Mythen auf Pinterest. Was wirklich zählt: Regelmäßigkeit über einen langen Zeitraum.</p>
+          <ul>
+            <li><strong>3 bis 5 Pins pro Woche</strong> sind ein solider Start</li>
+            <li>Erstelle mehrere Pins für denselben Inhalt - verschiedenes Design, verschiedene Überschriften</li>
+            <li>Verteile deine Pins über die Woche, nicht alles auf einmal</li>
+            <li>Nutze Tailwind oder den internen Pinterest-Planer für Vorausplanung</li>
+          </ul>
+        </div>
+
+        <p style="font-size:.92rem;color:var(--text-light)">Unsicher wie oft du wirklich pinnen solltest? <a href="blog-pinterest-wie-oft-pinnen.html" style="color:var(--accent-dark);font-weight:700">Hier bekommst du eine klare Antwort →</a></p>
+
+        <h2>Schritt 7: Auswerten was funktioniert</h2>
+
+        <div class="step-block">
+          <div class="step-block__number">Schritt 07</div>
+          <h3>Wer nicht auswertet, verbessert sich nicht</h3>
+          <p>Nach zwei bis vier Wochen schaust du dir deine Pinterest Analytics an. Nicht täglich - aber regelmäßig. Was du suchst:</p>
+          <ul>
+            <li>Welche Pins haben die meisten Klicks auf deine Website gebracht?</li>
+            <li>Welche Themen performen besser als andere?</li>
+            <li>Welche Designs werden häufiger gespeichert?</li>
+          </ul>
+          <p style="margin-top:.6rem">Was gut läuft, machst du mehr davon. Was nicht läuft, veränderst du. So einfach ist das System. Aber nur wenn du es aufschreibst - sonst vergisst du es.</p>
+        </div>
+
+        <div class="highlight-box">
+          <strong>Der häufigste Fehler von Anfängerinnen ist nicht schlechtes Design oder schlechte Keywords.</strong> Es ist dass sie pinnst und pinnst - ohne jemals zurückzuschauen was davon gewirkt hat. Ohne Auswertung keine Verbesserung. Ohne Verbesserung keine Ergebnisse.
+        </div>
+
+        <p style="font-size:.92rem;color:var(--text-light)">Genau daran scheitern viele: kein System, keine Auswertung. <a href="blog-pinterest-keine-ergebnisse.html" style="color:var(--accent-dark);font-weight:700">Warum Pins keine Ergebnisse bringen - und was wirklich fehlt →</a></p>
+
+        <h2>Was du jetzt brauchst</h2>
+
+        <p>Du hast die sieben Schritte. Du weißt was zu tun ist. Die Frage ist nicht ob du es kannst - die Frage ist ob du es auch durchhältst.</p>
+
+        <p>Die meisten Anfängerinnen scheitern nicht an Schritt 1. Sie scheitern an Schritt 6 - weil ihnen nach drei Wochen die Ideen ausgehen. Weil sie nicht mehr wissen was sie pinnen sollen. Weil sie wieder von vorne anfangen müssen.</p>
+
+        <p>Wer von Anfang an mit einem System arbeitet, hat dieses Problem nicht. Das Content Kit gibt dir die Ideen wenn sie fehlen. Das Logbuch zeigt dir was davon funktioniert. Zusammen machen sie aus Anfängerinnen Frauen die Pinterest wirklich verstehen.</p>
+
+        <p style="font-weight:700;color:var(--accent-dark)">Du weißt jetzt wie es geht. Fang heute an - nicht morgen.</p>
+
+        <div class="cta-block">
+          <div class="cta-tag">Dein Einstieg mit System</div>
+          <h3>Pinterest Erfolgsbundle</h3>
+          <p>Content Kit + Logbuch im Set. Ideen die du sofort nutzen kannst, Auswertung die dir zeigt was funktioniert. Für Anfängerinnen die von Anfang an richtig starten wollen - ohne die Fehler die alle anderen machen.</p>
+          <a href="https://marionschfers.tentary.com/p/AkZRAe" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Erfolgsbundle →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Erst kostenlos testen: <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" style="color:var(--accent-orange)">8 Pin-Fehler Gratis-Guide →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-wie-oft-pinnen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Wie oft sollte man auf Pinterest pinnen, ohne sich zu stressen?</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">3 bis 5 Pins pro Woche reichen - wenn du weißt was du tust.</span>
+        </a>
+        <a href="blog-pinterest-pins-klicks.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>8 Fehler warum deine Pins keine Klicks bekommen</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Konkrete Fehler, konkrete Lösungen - sofort umsetzbar.</span>
+        </a>
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pins keine Ergebnisse bringen, obwohl du alles richtig machst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog-social-media-frauen-ab40.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum Social Media für Frauen ab 40 nicht funktioniert</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Und was stattdessen wirklich hilft.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <img src="https://vg08.met.vgwort.de/na/8fcd4f99662640cba80242ebe9042751" width="1" height="1" alt="" />
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
