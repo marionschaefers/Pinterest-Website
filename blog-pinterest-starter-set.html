@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Das Pinterest Starter Set - warum ich drei Tools zu einem System zusammengefasst habe | Marion Schäfers</title>
+  <meta name="description" content="Vorlagen, Content Kit, Logbuch - drei Produkte die ich einzeln entwickelt habe und die erst zusammen ihr volles Potenzial entfalten. Was im Starter Set steckt und für wen es ist." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #2A1A3A 0%, #8C3F2A 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '📦';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .07;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--white); }
+    .article-hero .lead { color: rgba(254,254,254,.85); max-width: 640px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .4rem; }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .product-card {
+      background: var(--bg-secondary);
+      border-top: 3px solid var(--accent-orange);
+      padding: 1.6rem 1.8rem;
+      margin: 1.2rem 0;
+    }
+    .product-card__emoji { font-size: 1.5rem; margin-bottom: .5rem; display: block; }
+    .product-card__title { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .product-card__wert { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent-orange); font-weight: 700; margin-bottom: .6rem; }
+    .product-card p { font-size: .9rem; color: var(--text-light); line-height: 1.7; margin: 0; }
+
+    .price-box {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 1.6rem 2rem;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .price-box__label { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.55); margin-bottom: .3rem; }
+    .price-box__value { font-size: 2rem; font-weight: 700; color: var(--white); }
+    .price-box__old { font-size: .9rem; color: rgba(255,255,255,.45); text-decoration: line-through; }
+    .price-box__saving { font-size: .85rem; color: var(--accent-orange); font-weight: 700; margin-top: .2rem; }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 500px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+      .price-box { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Produkt · 07. Juni 2026</span>
+      <h1>Drei Tools.<br><strong>Ein System. Ein Preis.</strong></h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">Ich habe drei Produkte einzeln entwickelt - und gemerkt dass sie erst zusammen wirklich funktionieren. Was im Pinterest Starter Set steckt, warum ich es gebaut habe und für wen es gedacht ist.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 4 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Du sitzt vor Canva und weißt nicht wie dein Pin aussehen soll. Du hast eine Vorlage geöffnet - aber welche? Und was schreibst du drauf? Und war der letzte Pin eigentlich gut oder nicht?</p>
+
+        <p>Drei Fragen. Drei verschiedene Probleme. Und bis vor kurzem hatte ich dafür drei einzelne Antworten.</p>
+
+        <p>Dann habe ich gemerkt: Diese drei Produkte gehören zusammen. Sie lösen drei verschiedene Teile desselben Problems - und wer alle drei hat, hat ein System. Kein Rätselraten mehr. Kein Starten von vorne.</p>
+
+        <h2>Wie das Starter Set entstanden ist</h2>
+
+        <p>Ich habe die Produkte nicht von Anfang an als Bundle geplant. Ich habe sie nacheinander entwickelt - aus echten Problemen die ich selbst hatte oder von anderen Frauen gehört habe.</p>
+
+        <p>Zuerst die <strong>Vorlagen</strong>. Weil ich gesehen habe wie viel Zeit in Canva verloren geht wenn man kein fertiges Design hat. Weil ich selbst erlebt habe dass ein Pin der professionell aussieht anders wahrgenommen wird als einer der nach Bastelstunde aussieht.</p>
+
+        <p>Dann das <strong>Content Kit</strong>. Weil die größte Hürde für die meisten nicht das Design ist - sondern der Text. Was schreibe ich? Was soll der Hook sein? Wie formuliere ich das so dass jemand klickt?</p>
+
+        <p>Und schließlich das <strong>Logbuch</strong>. Weil Pinnen ohne Auswertung Blindflug ist. Weil ich selbst gemerkt habe: erst als ich aufgeschrieben habe was funktioniert, konnte ich es wiederholen. Und erst dann hat sich wirklich etwas bewegt.</p>
+
+        <div class="highlight-box">
+          Irgendwann habe ich mir die drei Produkte nebeneinander angeschaut und gedacht: Das ist ein System. Design - Text - Auswertung. Wer alle drei hat, weiß was er tut. Von Anfang an.
+        </div>
+
+        <h2>Was im Starter Set steckt</h2>
+
+        <div class="product-card">
+          <span class="product-card__emoji">🎨</span>
+          <div class="product-card__title">Pinterest Vorlagen Set</div>
+          <div class="product-card__wert">Wert: 27 €</div>
+          <p>51 fertige Canva-Vorlagen - sofort einsatzbereit. Du öffnest eine Vorlage, passt Farben, Schriften und Text an deine Nische an - und dein Pin steht. Kein stundenloses Herumprobieren. Kein "wie soll das aussehen". Das Design ist bereits da.</p>
+        </div>
+
+        <div class="product-card">
+          <span class="product-card__emoji">📝</span>
+          <div class="product-card__title">Pinterest Content Kit</div>
+          <div class="product-card__wert">Wert: 14 €</div>
+          <p>51 Hooks und 50 Prompts für Pins die wirklich geklickt werden. Du nimmst einen fertigen Hook, passt ihn an dein Thema an - und der Text steht in Minuten. Nie wieder vor einer leeren Canva-Seite sitzen und nicht wissen was du schreiben sollst.</p>
+        </div>
+
+        <div class="product-card">
+          <span class="product-card__emoji">📊</span>
+          <div class="product-card__title">Pinterest Logbuch</div>
+          <div class="product-card__wert">Wert: 9 €</div>
+          <p>Dein Tracking-System für Pinterest. Du pinnst nicht mehr nach Gefühl - sondern mit System. Das Logbuch zeigt dir welche Pins klicken, welche Themen funktionieren und was du gezielt wiederholen solltest. Pin-Tracking, Account-Auswertung und Keyword-Planer in einem.</p>
+        </div>
+
+        <!-- MITTE CTA -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Pinterest Starter Set - alle drei Tools zusammen</strong>
+            <p>37 € statt 50 € - sofortiger Download nach Kauf.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/WW7QwD" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Starter Set →</a>
+        </div>
+
+        <h2>So funktionieren sie zusammen</h2>
+
+        <p>Du öffnest eine Vorlage - das Design steht sofort. Du nimmst einen Hook aus dem Content Kit - der Text steht in Minuten. Du trägst den Pin ins Logbuch ein - und erkennst nach wenigen Wochen was wirklich funktioniert.</p>
+
+        <p>Das ist kein Zufall. Das ist ein System das aufeinander aufgebaut ist.</p>
+
+        <p>Und genau das ist der Unterschied zwischen Anfängerinnen die nach drei Monaten aufgeben - und denen die bleiben, wachsen und irgendwann ihren ersten Verkauf feiern.</p>
+
+        <h2>Für wen ist das Starter Set?</h2>
+
+        <p>Für dich wenn du neu auf Pinterest bist und gleich mit System starten willst - nicht nach Gefühl, nicht nach dem was irgendwer irgendwo geschrieben hat.</p>
+
+        <p>Für dich wenn du bereits pinnst aber das Gefühl hast dass dir Struktur fehlt. Dass du zwar Pins erstellst, aber nicht weißt ob du auf dem richtigen Weg bist.</p>
+
+        <p>Für dich wenn du Pinterest ruhig und effizient nutzen willst - ohne täglichen Aufwand, ohne Hustle, ohne das Gefühl dass du nie genug machst.</p>
+
+        <div class="price-box">
+          <div>
+            <div class="price-box__label">Pinterest Starter Set</div>
+            <div class="price-box__value">37 €</div>
+            <div class="price-box__old">Einzeln: 50 €</div>
+            <div class="price-box__saving">Du sparst 13 € · Einmalig · Sofortiger Download</div>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/WW7QwD" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Starter Set →</a>
+        </div>
+
+        <h2>Was sich verändert</h2>
+
+        <p>Ich werde dir nicht versprechen dass Pinterest über Nacht explodiert. Das wäre gelogen.</p>
+
+        <p>Was ich dir versprechen kann: Du weißt was du tust. Du startest nicht bei null - du startest mit einem System. Du verbringst deine Zeit damit zu pinnen statt zu grübeln. Und du erkennst nach wenigen Wochen was auf deinem Account wirklich funktioniert.</p>
+
+        <p>Das ist kein Wunder. Das ist Handwerk.</p>
+
+        <!-- ENDE CTA -->
+        <div class="cta-block">
+          <div class="cta-tag">Dein Einstieg mit System</div>
+          <h3>Pinterest Starter Set</h3>
+          <p>51 Vorlagen, 51 Hooks, 50 Prompts, Logbuch mit Keyword-Planer. Alles was du für einen starken Pinterest-Start brauchst - in einem Paket.</p>
+          <a href="https://marionschfers.tentary.com/p/WW7QwD" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Starter Set - 37 € →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Erst kostenlos testen: <a href="https://marionschfers.tentary.com/p/3FaTpX" target="_blank" rel="noopener" style="color:var(--accent-orange)">8 Pin-Fehler Gratis-Guide →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-anfaengerinnen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Pinterest für Anfängerinnen: Schritt für Schritt zur ersten Reichweite</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Der komplette Einstieg - in der richtigen Reihenfolge.</span>
+        </a>
+        <a href="blog-pinterest-zeitverlust.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Stunden die du jede Woche verlierst - ohne es zu merken</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Was kein System dich wirklich kostet.</span>
+        </a>
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pins keine Ergebnisse bringen</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <img src="https://vg08.met.vgwort.de/na/ae98a324dea847dfac169687f0eb2886" width="1" height="1" alt="" />
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
