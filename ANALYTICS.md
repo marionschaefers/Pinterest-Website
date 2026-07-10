@@ -53,6 +53,34 @@ Damit lässt sich der komplette Weg nachvollziehen:
 Der eigentliche Kauf passiert danach bei Tentary selbst – das liegt außerhalb dieser Website und wird von
 GoatCounter naturgemäß nicht erfasst.
 
+## Vorlage: UTM-Parameter für neue Pinterest-Pins
+
+Damit du künftig pro einzelnem Pin sehen kannst, wie viele Besuche und Produktklicks er bringt (nicht nur
+"kam von Pinterest" allgemein), gib jedem neuen Pin beim Erstellen eine eigene Ziel-URL nach diesem Schema:
+
+```
+https://marionschaefers.com/<artikel-datei>.html?utm_source=pinterest&utm_medium=pin&utm_campaign=<artikel-kurzname>-pin<nummer>
+```
+
+- `utm_source=pinterest` – bleibt für alle Pinterest-Pins immer gleich
+- `utm_medium=pin` – bleibt immer gleich
+- `utm_campaign` – ein kurzer, eindeutiger Name pro Pin, Schema: `<artikel-kurzname>-pin<laufende-nummer>`
+
+**Beispiel** (6 Pins zum Artikel "50 Ideen"):
+
+| Pin | Ziel-URL |
+|---|---|
+| Pin 1 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin1` |
+| Pin 2 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin2` |
+| Pin 3 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin3` |
+| Pin 4 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin4` |
+| Pin 5 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin5` |
+| Pin 6 | `https://marionschaefers.com/blog-pinterest-50-ideen.html?utm_source=pinterest&utm_medium=pin&utm_campaign=50ideen-pin6` |
+
+Die Auswertung findest du im Dashboard unter **Campaigns** – dort erscheint jeder `utm_campaign`-Wert als
+eigene Zeile mit eigener Besucherzahl. Kein Code muss dafür angepasst werden, das funktioniert automatisch
+für jede neue URL mit diesen Parametern.
+
 ## Technische Umsetzung
 
 - Tracking-Skript in `<head>` jeder Seite: `<script data-goatcounter="..." async src="//gc.zgo.at/count.js"></script>`
