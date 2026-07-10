@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wenn ich heute noch einmal bei null mit Pinterest anfangen müsste | Marion Schäfers</title>
+  <meta name="description" content="Nach mehr als 100 Pins, 813 Besuchen bei Tentary und 19 Euro Umsatz: Was ich nach meinen ersten Monaten auf Pinterest anders machen würde. Ehrlich, ohne Beschönigung." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #2A1F18 0%, #FF751F 100%);
+      padding: 80px 0 64px;
+      border-bottom: 3px solid var(--accent-orange);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '🌱';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9rem;
+      opacity: .1;
+      pointer-events: none;
+    }
+    .article-hero .label { color: rgba(254,254,254,.55); }
+    .article-hero h1 { color: var(--white); font-weight: 300; margin-bottom: .5rem; }
+    .article-hero h1 strong { font-weight: 700; color: var(--white); }
+    .article-hero .lead { color: rgba(254,254,254,.85); max-width: 640px; }
+    .article-hero .article-meta { color: rgba(254,254,254,.45); font-size: .8rem; margin-top: 1.2rem; }
+    .article-hero .article-meta a { color: rgba(254,254,254,.6); text-decoration: underline; }
+
+    .article-body { max-width: 740px; margin: 0 auto; }
+    .article-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2.4rem 0 .8rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-orange);
+    }
+    .article-body p { line-height: 1.8; margin-bottom: 1.1rem; color: var(--text); }
+    .article-body ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .article-body ul li { margin-bottom: .4rem; }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      font-size: .97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .mid-cta {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.8rem;
+      margin: 2.4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mid-cta__text strong { display: block; margin-bottom: .25rem; color: var(--ink); }
+    .mid-cta__text p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    .cta-block {
+      background: var(--accent-dark);
+      color: var(--white);
+      padding: 2.4rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .cta-block .cta-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent-orange);
+      font-weight: 700;
+      margin-bottom: .6rem;
+    }
+    .cta-block h3 { color: var(--white); font-size: 1.35rem; margin-bottom: .6rem; }
+    .cta-block p { color: rgba(254,254,254,.8); max-width: 500px; margin: 0 auto 1.4rem; line-height: 1.7; font-size: .93rem; }
+
+    @media (max-width: 600px) {
+      .mid-cta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Marion Schäfers</a>
+      <button class="nav__toggle" aria-label="Menü öffnen" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="empfehlungen.html">Produkte</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="empfehlungen.html" class="btn btn-primary" style="padding:.55rem 1.4rem;font-size:.72rem">Zum Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="container">
+      <span class="label">Erfahrungsbericht · 10. Juli 2026</span>
+      <h1>Wenn ich heute noch einmal<br><strong>bei null anfangen müsste.</strong></h1>
+      <div class="divider" style="background:rgba(255,255,255,.2);margin:1rem 0"></div>
+      <p class="lead">Was ich nach meinen ersten Monaten, mehr als 100 Pins, 813 Besuchen bei Tentary und 19 Euro Umsatz anders machen würde.</p>
+      <p class="article-meta">Von Marion Schäfers · ca. 8 Minuten Lesezeit · <a href="blog.html">← Zurück zum Blog</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+
+        <p>Als ich im März mit Pinterest angefangen habe, hatte ich eine ziemlich einfache Vorstellung davon, wie das Ganze funktionieren würde.</p>
+
+        <p>Ich erstelle Pins.</p>
+        <p>Menschen sehen sie.</p>
+        <p>Sie klicken.</p>
+        <p>Sie kommen auf meine Website oder in meinen Shop.</p>
+        <p>Und irgendwann kauft jemand.</p>
+
+        <p>So ungefähr hatte ich mir das vorgestellt.</p>
+
+        <p>Heute, einige Monate später, habe ich mehr als 100 Pins erstellt, 16 Blogartikel veröffentlicht, mehrere digitale Produkte entwickelt, zwei kostenlose Guides erstellt, E-Mail-Automationen eingerichtet und 813 Besuche bei Tentary erreicht.</p>
+
+        <p>Mein bisheriger Umsatz?</p>
+        <p>19 Euro.</p>
+        <p>Davon wurden mir 18,40 Euro ausgezahlt.</p>
+
+        <p>Das ist vermutlich nicht die Zahl, die du auf einem Pinterest-Pin erwartet hast.</p>
+
+        <p>Dort liest man schließlich ganz andere Dinge.</p>
+
+        <ul>
+          <li>5.000 Euro im Monat.</li>
+          <li>Sechsstellige Umsätze.</li>
+          <li>Passives Einkommen.</li>
+          <li>Canva bezahlt deine Miete.</li>
+          <li>Digitale Produkte, die sich im Schlaf verkaufen.</li>
+        </ul>
+
+        <p>Und dann komme ich mit meinen 19 Euro.</p>
+
+        <p>Warum ich trotzdem darüber schreibe?</p>
+
+        <p>Weil ich glaube, dass zwischen dem ersten Pin und den großen Erfolgsgeschichten ein ziemlich langer Weg liegt.</p>
+
+        <p>Und über genau diesen Weg wird erstaunlich wenig gesprochen.</p>
+
+        <h2>Ich dachte lange, ich müsste einfach mehr machen</h2>
+
+        <ul>
+          <li>Mehr Pins.</li>
+          <li>Mehr Produkte.</li>
+          <li>Mehr Blogartikel.</li>
+          <li>Mehr lernen.</li>
+          <li>Mehr ausprobieren.</li>
+          <li>Mehr optimieren.</li>
+        </ul>
+
+        <p>Wenn etwas nicht funktioniert hat, war mein erster Gedanke oft: <em>Dann muss ich eben noch etwas machen.</em></p>
+
+        <p>Also habe ich weitergearbeitet.</p>
+
+        <ul>
+          <li>Ich habe Pins erstellt.</li>
+          <li>Produkte entwickelt.</li>
+          <li>Verkaufsseiten geschrieben.</li>
+          <li>Texte überarbeitet.</li>
+          <li>Freebies erstellt.</li>
+          <li>E-Mails geschrieben.</li>
+          <li>Blogartikel veröffentlicht.</li>
+        </ul>
+
+        <p>Und natürlich immer wieder meine Zahlen angeschaut. Manchmal mehrmals am Tag.</p>
+
+        <p>Pinterest zeigte mir Impressionen. Meine Zielgruppe stieg. Dann sank sie wieder. Ein Pin hatte plötzlich mehrere Klicks. Am nächsten Tag zeigte Pinterest andere Zahlen. Bei Tentary kamen Besucher an. Aber niemand kaufte.</p>
+
+        <p>Und irgendwann stellte ich mir eine Frage, die ich mir viel früher hätte stellen sollen:</p>
+
+        <div class="highlight-box">
+          Bringt mich mehr machen wirklich weiter - wenn ich gar nicht weiß, was davon funktioniert?
+        </div>
+
+        <h2>1. Ich würde nicht mit einem Produkt anfangen</h2>
+
+        <p>Wenn ich heute noch einmal bei null anfangen müsste, würde ich nicht als Erstes überlegen: Was könnte ich verkaufen?</p>
+
+        <p>Ich würde mich fragen: Welches Problem hat die Frau, die ich erreichen möchte? Und zwar nicht irgendein Problem. Sondern eines, das sie wirklich beschäftigt.</p>
+
+        <ul>
+          <li>Warum bekommt mein Pin keine Klicks?</li>
+          <li>Warum habe ich Impressionen, aber keine Besucher?</li>
+          <li>Was soll ich überhaupt posten?</li>
+          <li>Warum sitze ich seit zwei Stunden vor Canva und habe immer noch keinen fertigen Pin?</li>
+          <li>Warum funktionieren die Pins der anderen - und meine nicht?</li>
+        </ul>
+
+        <p>Genau dort würde ich anfangen.</p>
+
+        <p>Denn ich habe in den vergangenen Monaten etwas Interessantes beobachtet. Einer meiner erfolgreicheren Pins stellte nur eine einfache Frage: „Würdest du selbst auf deinen eigenen Pin klicken?" Ein anderer begann mit: „1.000 Impressionen. Und trotzdem kaum Besucher?"</p>
+
+        <p>Keine großen Umsatzversprechen. Kein „So wirst du in 30 Tagen erfolgreich". Keine angebliche Geheimstrategie.</p>
+
+        <p>Nur Fragen, die offenbar etwas getroffen haben. Menschen klickten. Sie besuchten mein Profil. Und ich begann zu verstehen:</p>
+
+        <div class="highlight-box">
+          Vielleicht muss ich meiner Zielgruppe nicht ständig erzählen, was sie erreichen könnte. Vielleicht muss ich zuerst darüber sprechen, was sie gerade erlebt.
+        </div>
+
+        <h2>2. Ich würde früher anfangen, meine Zahlen aufzuschreiben</h2>
+
+        <p>Ich habe viele Pins erstellt. Aber lange konnte ich dir nicht sagen, welcher wirklich gut funktioniert hat.</p>
+
+        <p>Ich wusste nicht mehr genau: Welcher Hook hatte Klicks? Welche Farben hatte der Pin? Wann hatte ich ihn veröffentlicht? Welches Thema hatte funktioniert? Welche Pins wurden gespeichert?</p>
+
+        <p>Ich hatte eine ungefähre Erinnerung. Mehr nicht. Und eine ungefähre Erinnerung ist keine besonders gute Grundlage für Entscheidungen.</p>
+
+        <p>Deshalb würde ich heute vom ersten Pin an aufschreiben, was passiert. Nicht jeden Tag stundenlang Statistiken analysieren. Nicht wegen jeder Schwankung nervös werden. Sondern beobachten.</p>
+
+        <p>Nach 7 Tagen. Nach 30 Tagen. Was wurde gesehen? Was wurde angeklickt? Welcher Pin brachte Profilbesuche? Welcher führte tatsächlich auf meine Website?</p>
+
+        <p>Denn inzwischen glaube ich:</p>
+
+        <div class="highlight-box">
+          Du brauchst nicht möglichst schnell möglichst viele Pins. Du brauchst möglichst schnell Informationen darüber, was auf deinem Account funktioniert.
+        </div>
+
+        <!-- MITTE CTA 1: Pinterest Logbuch -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Genau deshalb habe ich angefangen, meine Pins aufzuschreiben</strong>
+            <p>Ich wollte nicht länger aus dem Gedächtnis entscheiden, was funktioniert hat. Mein Pinterest Logbuch hilft dir dabei, deine Pins, Klicks, Themen und Ergebnisse festzuhalten - damit du nicht jede Woche wieder raten musst.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/V7KGs0" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Pinterest Logbuch ansehen →</a>
+        </div>
+
+        <h2>3. Ich würde nicht jeden guten Rat sofort umsetzen</h2>
+
+        <p>Das ist wahrscheinlich einer der Punkte, die mir am schwersten fallen.</p>
+
+        <p>Ich sehe etwas Interessantes. Einen Blogartikel. Einen Pinterest-Pin. Eine neue Strategie. Ein neues Tool. Und sofort denke ich: Könnte ich das auch für mein Business nutzen?</p>
+
+        <p>Manchmal lautet die Antwort: Ja. Aber nicht immer.</p>
+
+        <p>Denn wenn du jeden guten Rat sofort umsetzt, passiert etwas Merkwürdiges. Dein Business wird nicht automatisch besser. Es wird voller.</p>
+
+        <ul>
+          <li>Noch ein Tool.</li>
+          <li>Noch eine Strategie.</li>
+          <li>Noch eine Liste.</li>
+          <li>Noch ein Produkt.</li>
+          <li>Noch eine Idee.</li>
+        </ul>
+
+        <p>Und irgendwann weißt du nicht mehr, was davon du eigentlich wirklich brauchst.</p>
+
+        <p>Wenn ich heute noch einmal anfangen würde, würde ich mir bei jeder neuen Idee drei Fragen stellen:</p>
+
+        <ul>
+          <li>Passt das zu meiner Zielgruppe?</li>
+          <li>Löst es ein Problem, das ich tatsächlich habe?</li>
+          <li>Kann ich später erkennen, ob es funktioniert hat?</li>
+        </ul>
+
+        <p>Wenn ich eine dieser Fragen nicht beantworten kann, würde ich die Idee erst einmal liegen lassen.</p>
+
+        <h2>4. Ich würde meine Pins nicht danach beurteilen, wie schön ich sie finde</h2>
+
+        <p>Ich liebe es, Dinge zu gestalten. Farben auszuwählen. Texte zu verändern. Vorlagen zu erstellen.</p>
+
+        <p>Aber Pinterest ist keine Kunstausstellung. Ein schöner Pin, auf den niemand klickt, bringt mir mein Business nicht weiter.</p>
+
+        <p>Diese Erkenntnis klingt selbstverständlich. Für mich war sie es nicht. Ich habe lange sehr viel über Designs nachgedacht.</p>
+
+        <p>Heute stelle ich mir zuerst eine andere Frage: Würde ich selbst auf diesen Pin klicken?</p>
+
+        <p>Nicht: Ist er schön? Nicht: Passt die Schrift perfekt? Nicht: Ist alles genau ausgerichtet?</p>
+
+        <p>Sondern: Bleibe ich hängen? Möchte ich wissen, wie es weitergeht? Erkenne ich mich in diesem Problem wieder?</p>
+
+        <p>Erst danach kommt das Design.</p>
+
+        <h2>5. Ich würde nicht mehr glauben, dass Impressionen automatisch Erfolg bedeuten</h2>
+
+        <p>1.000 Impressionen. Das klingt erst einmal gut. Tausendmal wurde dein Content angezeigt.</p>
+
+        <p>Und dann schaust du genauer hin. Kaum Besucher. Keine Verkäufe. Vielleicht nicht einmal ein Klick auf deine Website.</p>
+
+        <p>Was bringen dir dann die 1.000 Impressionen?</p>
+
+        <p>Natürlich sind Impressionen nicht unwichtig. Ohne Sichtbarkeit kann niemand klicken. Aber heute weiß ich: Eine große Zahl allein sagt mir noch nicht, ob mein Business wächst.</p>
+
+        <p>Ich möchte wissen:</p>
+
+        <ul>
+          <li>Bleiben Menschen an meinem Pin hängen?</li>
+          <li>Klicken sie?</li>
+          <li>Besuchen sie mein Profil?</li>
+          <li>Gehen sie auf meine Website?</li>
+          <li>Lesen sie meinen Artikel?</li>
+          <li>Schauen sie sich mein Produkt an?</li>
+          <li>Kaufen sie?</li>
+        </ul>
+
+        <p>Das sind viele einzelne Schritte. Und genau deshalb würde ich heute nicht mehr nur auf die größte Zahl schauen.</p>
+
+        <h2>6. Ich würde viel früher einen Weg vom Pin bis zum Produkt bauen</h2>
+
+        <p>Das ist etwas, das ich selbst gerade erst richtig verstehe.</p>
+
+        <p>Ein Pin allein verkauft nicht automatisch ein Produkt. Ein Blogartikel auch nicht. Ein Freebie ebenfalls nicht. Und ein gutes Produkt kann monatelang in einem Shop liegen, ohne dass jemand es kauft.</p>
+
+        <p>Entscheidend ist der Weg dazwischen.</p>
+
+        <p>Eine Frau sieht meinen Pin. Sie erkennt ihr Problem. Sie klickt. Sie liest meinen Blogartikel. Sie merkt, dass ich verstehe, was sie beschäftigt. Sie lädt vielleicht meinen kostenlosen Guide herunter. Sie bekommt weitere E-Mails. Und irgendwann erkennt sie: Dieses Produkt könnte mein nächster sinnvoller Schritt sein.</p>
+
+        <p>Wenn ich heute neu anfangen würde, würde ich diesen Weg viel früher planen. Nicht zehn Produkte erstellen und anschließend überlegen, wie ich sie verkaufen soll. Sondern:</p>
+
+        <ul>
+          <li>Ein Problem.</li>
+          <li>Ein passender Inhalt.</li>
+          <li>Ein sinnvoller nächster Schritt.</li>
+          <li>Ein passendes Angebot.</li>
+        </ul>
+
+        <!-- MITTE CTA 2: Erfolgsbundle -->
+        <div class="mid-cta">
+          <div class="mid-cta__text">
+            <strong>Ideen allein reichen nicht. Auswertung allein auch nicht.</strong>
+            <p>Im Pinterest Erfolgsbundle verbinde ich Content-Ideen mit dem Logbuch für deine Auswertung. Damit du weißt, was du posten kannst - und anschließend erkennst, was davon funktioniert.</p>
+          </div>
+          <a href="https://marionschfers.tentary.com/p/b6N6Gl" target="_blank" rel="noopener" class="btn btn-primary" style="white-space:nowrap">Erfolgsbundle ansehen →</a>
+        </div>
+
+        <h2>7. Ich würde nicht nach vier Monaten erwarten, schon alles verstanden zu haben</h2>
+
+        <p>Das schreibe ich vor allem für mich selbst.</p>
+
+        <p>Ich bin seit März auf Pinterest. Manchmal fühlt es sich viel länger an. Vielleicht, weil ich in dieser Zeit unglaublich viel gemacht habe.</p>
+
+        <p>Und dann schaue ich auf meinen Umsatz von 19 Euro und denke: Das kann doch nicht alles sein.</p>
+
+        <p>Nein. Das soll auch nicht alles sein.</p>
+
+        <p>Ich möchte mit meinem Business Geld verdienen. Nicht irgendwann vielleicht. Sondern regelmäßig. Ich möchte, dass sich meine Arbeit auszahlt. Ich möchte Verkäufe sehen. Ich möchte morgens aufstehen und feststellen, dass jemand ein Produkt gekauft hat, während ich im Garten war, bei meinen Bienen gearbeitet oder Zeit mit meinem Mann verbracht habe.</p>
+
+        <p>Das ist mein Ziel. Und ich werde nicht so tun, als wäre mir Geld unwichtig.</p>
+
+        <p>Aber ich beginne zu verstehen, dass vier Monate vielleicht nicht der richtige Zeitraum sind, um zu entscheiden, ob etwas funktioniert.</p>
+
+        <p>Sehr wohl aber, um zu entscheiden, ob ich bereit bin zu lernen.</p>
+
+        <h2>813 Besuche. 3 Verkäufe. 19 Euro Umsatz.</h2>
+
+        <p>Diese Zahlen könnte ich als Niederlage betrachten. Ich könnte sagen: Meine Produkte funktionieren nicht. Pinterest funktioniert nicht. Mein Business funktioniert nicht.</p>
+
+        <p>Ich könnte alles verändern. Neue Produkte erstellen. Meine Preise senken. Meine Website umbauen. Noch einen Kurs kaufen. Noch mehr Pins veröffentlichen.</p>
+
+        <p>Aber genau das werde ich nicht tun. Zumindest nicht mehr ohne zu wissen, warum.</p>
+
+        <p>Denn inzwischen passiert etwas. Meine Pins bekommen erste Klicks. Menschen besuchen mein Profil. Besucher kommen bei Tentary an. Manche meiner Produkte werden häufiger angesehen als andere. Bestimmte Hooks funktionieren auffällig besser.</p>
+
+        <p>Ich bin noch nicht dort, wo ich hinwill. Aber ich habe heute etwas, das ich am Anfang nicht hatte.</p>
+
+        <p>Erste eigene Daten.</p>
+
+        <p>Und vielleicht sind diese Daten im Moment wertvoller als der nächste Pinterest-Tipp, den ich irgendwo lese.</p>
+
+        <h2>Was ich heute stattdessen machen würde</h2>
+
+        <p>Wenn ich heute noch einmal bei null mit Pinterest anfangen müsste, würde ich nicht versuchen, alles richtig zu machen.</p>
+
+        <p>Ich würde versuchen, schneller zu lernen.</p>
+
+        <p>Ich würde mit einem echten Problem anfangen. Einen hilfreichen Inhalt dazu erstellen. Mehrere unterschiedliche Pins testen. Meine Ergebnisse aufschreiben. Beobachten. Anpassen. Und erst dann den nächsten Schritt gehen.</p>
+
+        <p>Nicht blind weitermachen. Nicht täglich alles verändern. Nicht jedem neuen Trend hinterherlaufen.</p>
+
+        <h2>Vielleicht musst du nicht mehr machen</h2>
+
+        <p>Vielleicht hast du bereits 20 Pins erstellt. Oder 50. Oder 100. Vielleicht hast du ein Produkt. Einen Blog. Eine Website. Und trotzdem fragst du dich: Warum passiert so wenig?</p>
+
+        <p>Dann möchte ich dir nicht einfach sagen: „Du musst nur durchhalten." Denn manchmal reicht Durchhalten nicht.</p>
+
+        <p>Wenn du immer wieder dasselbe machst und nicht beobachtest, was passiert, kannst du auch 500 Pins erstellen und trotzdem wenig lernen.</p>
+
+        <p>Deshalb glaube ich heute:</p>
+
+        <div class="highlight-box">
+          Du brauchst nicht unbedingt mehr Motivation. Du brauchst auch nicht jeden Tag eine neue Idee. Du brauchst eine Möglichkeit, zu erkennen, was funktioniert - und was nicht.
+        </div>
+
+        <p>Genau deshalb habe ich begonnen, mein eigenes Pinterest-System aufzubauen.</p>
+
+        <p>Mit Ideen, damit ich nicht jedes Mal bei null anfange. Mit Vorlagen, damit ich nicht stundenlang vor Canva sitze. Und mit einem Logbuch, damit ich endlich schwarz auf weiß sehe, welche Pins funktionieren.</p>
+
+        <p>Nicht, damit ich noch mehr machen kann. Sondern damit das, was ich mache, irgendwann auch Ergebnisse bringt.</p>
+
+        <h2>Würde ich noch einmal mit Pinterest anfangen?</h2>
+
+        <p>Ja.</p>
+
+        <p>Aber ich würde vieles anders machen. Ich würde weniger raten. Weniger vergleichen. Weniger hektisch verändern.</p>
+
+        <p>Ich würde früher messen. Früher beobachten. Früher verstehen wollen.</p>
+
+        <p>Und ich würde mir immer wieder eine Frage stellen: Bringt mich das, was ich gerade mache, wirklich meinem Ziel näher?</p>
+
+        <p>Denn ich möchte nicht mein Leben lang nur Pins erstellen, Blogartikel schreiben und Produkte entwickeln. Ich möchte damit Geld verdienen.</p>
+
+        <p>Die 19 Euro sind nicht mein Ziel. Aber sie sind auch nicht null.</p>
+
+        <p>Und vielleicht ist genau das der Punkt, an dem ich gerade stehe. Nicht mehr ganz am Anfang. Noch lange nicht am Ziel. Aber zum ersten Mal mit einer immer besseren Vorstellung davon, welchen Weg ich gehen möchte.</p>
+
+        <p>Wenn ich heute noch einmal bei null mit Pinterest anfangen müsste, würde ich deshalb nicht versuchen, schneller zu wachsen.</p>
+
+        <p style="font-weight:700;color:var(--accent-dark)">Ich würde versuchen, schneller zu verstehen, was funktioniert. Und genau dort würde ich anfangen.</p>
+
+        <!-- ENDE CTA: Starter Set -->
+        <div class="cta-block">
+          <div class="cta-tag">Ideen + Vorlagen + Auswertung</div>
+          <h3>Pinterest Starter Set</h3>
+          <p>Wenn ich heute noch einmal mit Pinterest anfangen müsste, würde ich mir von Anfang an ein System aufbauen. Genau deshalb gibt es mein Pinterest Starter Set: 51 Canva-Vorlagen für die Umsetzung, Content-Ideen und Hooks, damit du nicht vor einem leeren Blatt sitzt, und das Pinterest Logbuch, damit du erkennst, welche Pins tatsächlich funktionieren. Nicht, damit du noch mehr machst. Sondern damit du aus dem lernst, was du bereits machst.</p>
+          <a href="https://marionschfers.tentary.com/p/WW7QwD" target="_blank" rel="noopener" class="btn btn-primary">Pinterest Starter Set ansehen →</a>
+          <span style="display:block;margin-top:.8rem;font-size:.85rem;color:rgba(255,255,255,.6)">Nur Content Kit + Logbuch: <a href="https://marionschfers.tentary.com/p/b6N6Gl" target="_blank" rel="noopener" style="color:var(--accent-orange)">Erfolgsbundle →</a></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Weiterlesen</span>
+        <h2>Mehr aus dem Blog</h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid;gap:1rem;max-width:740px;margin:0 auto">
+        <a href="blog-pinterest-starter-set.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Das Pinterest Starter Set - drei Tools, ein System</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Was drin ist und für wen es gemacht wurde.</span>
+        </a>
+        <a href="blog-pinterest-keine-ergebnisse.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Warum deine Pinterest Pins keine Ergebnisse bringen, obwohl du alles richtig machst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Dir fehlt kein Fleiß. Dir fehlt ein System.</span>
+        </a>
+        <a href="blog-pinterest-50-ideen.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>50 Ideen was du auf Pinterest posten kannst</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Kein leeres Blatt mehr.</span>
+        </a>
+        <a href="blog.html" style="display:block;background:var(--white);padding:1.2rem 1.5rem;text-decoration:none;color:var(--text);border-left:3px solid var(--accent-orange)">
+          <strong>Alle Blogartikel →</strong>
+          <span style="display:block;font-size:.85rem;color:var(--text-light);margin-top:.3rem">Pinterest Marketing &amp; digitale Produkte</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="signature">Marion Schäfers</span>
+          <p>Klar starten. Stabil wachsen.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="empfehlungen.html">Produkte</a></li>
+            <li><a href="https://marionschfers.tentary.com" target="_blank" rel="noopener">Mein Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Marion Schäfers. Alle Rechte vorbehalten.</span>
+        <a href="https://pinterest.com/marion_schfers" target="_blank" rel="noopener" style="color:inherit">📌 @marion_schfers</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TODO: eigene VG Wort Zählmarke für diesen Artikel einfügen -->
+  <script src="cursor.js"></script>
+  <script src="cookie.js"></script>
+</body>
+</html>
